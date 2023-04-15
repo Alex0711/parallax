@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{
+      body {
         margin: 0px;
         line-height: 0px;
       }
-      .parallax-container{
+      /* .parallax-container{
         width: 100%;
         height: 100vh;
-        perspective: 8px;
+        perspective: 1rem;
         perspective-origin: 50%;
         overflow-x: hidden;
-        overflow-y: scroll;
         line-height: 0px;
+        transform-origin: 0 50%;
+        overflow-y: scroll;
+
+      } */
+      .parallax-container {
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://i.ibb.co/jbLKgvX/Background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        perspective: 1rem;
+        transform-origin: 0 50%;
+        overflow-y: scroll;
       }
-      .image{
+      .image {
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
         transform: translate(0, 50%);
       }
-      .background{
+      .background {
         height: 100vh;
         width: 100%;
         transform: translateZ(0px) scale(1);
-        transform-origin: 0 50%;
+        /* transform-origin: 0 50%; */
       }
       img {
         width: 100%;
       }
-      .middle{
+      .middle {
         width: 100%;
-        transform: translateZ(5px) scale(.375);
+        transform: translateZ(0.4rem) scale(0.375);
         transform-origin: 50%;
         z-index: 2;
       }
-      .foreground{
+      .foreground {
         width: 100%;
-        transform: translateZ(2px) scale(.75);
+        transform: translateZ(2px) scale(0.75);
         transform-origin: top;
       }
-      .card{
+      .card {
         background: white;
         border-radius: 8px;
         width: 80px;
@@ -69,22 +82,22 @@
         transform: rotate(30deg);
       }
     </style>
-</head>
-<body>
-  <div class="parallax-container">
-    <div class="image background">
-        <img src="https://i.ibb.co/jbLKgvX/Background.png" alt="">
-    </div>
+  </head>
+  <body>
+    <div class="parallax-container">
+      <!-- <div class="image background"> -->
+        <!-- <img src="https://i.ibb.co/jbLKgvX/Background.png" alt="" /> -->
+      <!-- </div> -->
 
-    <div class="image middle">
+      <div class="image middle">
         <div class="card one"></div>
         <div class="card two"></div>
         <div class="card three"></div>
-    </div>
+      </div>
 
-    <div class="image foreground">
-        <img src="https://i.ibb.co/vJdbRkj/Alice.png" alt="">
+      <div class="image foreground">
+        <img src="https://i.ibb.co/vJdbRkj/Alice.png" alt="" />
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
